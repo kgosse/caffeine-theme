@@ -29,6 +29,14 @@
             </div>
             {{> comments}}
         </div>
+        <script>
+            window.onload = function() {
+                var hash = window.location.hash;
+                if (hash.length !== 0) {
+                    document.querySelector("a" + hash).click();
+                }
+            }
+        </script>
     </div>
     {{> post-pagination}}
   </article>
