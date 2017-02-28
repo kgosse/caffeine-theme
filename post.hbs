@@ -29,7 +29,12 @@
             </div>
             {{> comments}}
         </div>
-        <script>
+
+    </div>
+    {{> post-pagination}}
+  </article>
+
+          <script>
             (function() {
                 setTimeout(function(){
                     var hash = window.location.hash;
@@ -39,8 +44,5 @@
                 }, 1500);
             })();
         </script>
-    </div>
-    {{> post-pagination}}
-  </article>
 
 {{/post}}
