@@ -30,12 +30,14 @@
             {{> comments}}
         </div>
         <script>
-            window.onload = function() {
-                var hash = window.location.hash;
-                if (hash.length !== 0) {
-                    document.querySelector("a" + hash).click();
-                }
-            }
+            (function() {
+                setTimeout(function(){
+                    var hash = window.location.hash;
+                    if (hash.length !== 0) {
+                        document.querySelector("a" + hash).click();
+                    }
+                }, 1500);
+            })();
         </script>
     </div>
     {{> post-pagination}}
